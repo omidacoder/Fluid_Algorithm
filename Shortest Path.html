@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <style>
+        .getinformationbox{
+            background-color:floralwhite;
+            padding: 20px;
+            border-radius: 5px;
+            color: blue;
+        }
+        </style>
+         <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+    </head>
+    <body onload="DrawCanvas()">
+        <div class="getinformationbox">
+           <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Enter Your Nodes With , In Between:" id="Nodes" type="text" class="validate">
+          <label for="Edges">Nodes</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="Edges" type="text" placeholder="Enter Edges With , in Between ex:1-2-4 = edge between 1 and 2 and weight = 4" class="validate">
+          <label for="Edges">Edges</label>
+        </div>
+      </div>
+   <div class="row">
+      <div class="input-field col s6">
+          <input id="Shortest" type="text" placeholder="Enter Start Point and Finish Point: ex:A-D" class="validate">
+          <label for="Shortest">Shrtest Path</label>
+        </div>
+        <div class="col s6">
+<a class="waves-effect waves-light btn-large" onclick="FindShortestPath();">FindShortestPath</a>
+       </div>
+            </div>
+</div>
+        <div class="row">
+        <div class="col s3"></div>
+        <div class="col s6">
+        <canvas id="MyCanvas" style="border:1px solid #000000;">
+            <!-- Js Will Controll This Part -->
+        </canvas>
+            </div>
+        <div class="col s3"></div>
+        </div>
+    </body>
+    <script src="Fluid.js">
+    </script>
+</html>
